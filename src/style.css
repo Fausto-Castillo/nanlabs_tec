@@ -1,0 +1,180 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+}
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: calc(100vh - 100px);
+  margin-bottom: 50px;
+  max-height: 500px;
+  margin: 40px;
+}
+
+.hero-image h2 {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 3px 0px black;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  margin: 0 40px;
+}
+
+.navBarContainer {
+  position: relative;
+  height: 100%;
+  width: 50px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+
+.navBarContainer:hover {
+  position: relative;
+  height: 100%;
+  width: 350px;
+}
+
+.navBar {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  background: #292c31;
+  color: white;
+  width: inherit;
+  display: grid;
+  justify-content: center;
+  transition: all 0.2s;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.navBarItem {
+  width: 300px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  transition: all 0.2s;
+}
+
+.navBarIcon {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  background: #292c31;
+  padding: 10px 0;
+  width: -moz-available !important;
+  padding: 5px 0;
+}
+
+.button-history {
+  margin-right: 20px;
+  padding: 9px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  justify-content: space-between;
+  width: 99px;
+  align-content: center;
+  display: flex;
+}
+
+.button-history:disabled {
+  opacity: 0.5;
+}
+
+.container-images {
+  padding: 20 40px;
+}
+
+h4 {
+  color: #24262b;
+  cursor: default;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  height: 42px;
+  line-height: 42px;
+  user-select: none;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+h5 {
+  color: #fff;
+  cursor: default;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 42px;
+  line-height: 42px;
+  user-select: none;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.button-download {
+  background-color: #34373d;
+  display: inline-block;
+  font-size: 100%;
+  border: solid 1px transparent;
+  padding: 5px 10px;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  width: 92px;
+  font-family: "Roboto", sans-serif;
+}
+
+.button-download:hover {
+  background-color: #3f4249;
+  box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.signature {
+  padding: 2px 80px 2px 20px;
+  background-color: #3f4249;
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: #fff;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
