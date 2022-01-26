@@ -75,10 +75,22 @@ export default function BottomBar(props) {
       setOpen(false);
     }
   }
+  
+   const handleClose = () => {
+    setOpen(false);
+  };
+  
   return (
     <Grid container direction="row" className="bottom-bar"
       justifyContent="space-between"
       alignItems="center">
+      <Backdrop
+        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={open}
+        onClick={handleClose}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
       <Grid
         xs={2}
         item
